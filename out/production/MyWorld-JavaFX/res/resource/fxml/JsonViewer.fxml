@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="frag_message" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myworld.ui.controller.JsonViewerController">
+    <children>
+        <ComboBox fx:id="cb_cmd" editable="true" layoutX="14.0" layoutY="44.0" prefHeight="30.0" prefWidth="150.0" promptText="Command" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="55.0" />
+        <TextArea fx:id="txt_json" editable="false" layoutX="42.0" layoutY="91.0" prefHeight="404.0" prefWidth="690.0" promptText="Loading data..." wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="91.0">
+            <font>
+                <Font name="Consolas Bold" size="13.0" />
+            </font>
+            <contextMenu>
+                <ContextMenu fx:id="menu_context">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Copy to Clipboard" />
+                        <MenuItem mnemonicParsing="false" text="Clear All" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TextArea>
+        <TextField fx:id="txt_cmd" layoutX="168.0" layoutY="44.0" prefHeight="30.0" prefWidth="336.0" promptText="Enter text" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="55.0">
+            <font>
+                <Font name="Cambria" size="13.0" />
+            </font>
+        </TextField>
+        <Button fx:id="btn_excute" layoutX="515.0" layoutY="55.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="78.0" text="Excute" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="55.0">
+            <font>
+                <Font name="Cambria" size="13.0" />
+            </font>
+        </Button>
+        <Label layoutX="42.0" layoutY="6.0" text="JsonViewer" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <font>
+                <Font name="Cambria Bold" size="26.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icon/json.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
+    </children>
+</AnchorPane>

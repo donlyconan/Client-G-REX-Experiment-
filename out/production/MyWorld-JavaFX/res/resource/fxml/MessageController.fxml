@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="frag_message" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myworld.ui.controller.MessageController">
+   <children>
+      <VBox layoutX="210.0" layoutY="59.0" prefHeight="2000.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Bạn bè">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inp_search" focusTraversable="false" prefHeight="26.0" prefWidth="240.0" promptText="Tìm kiếm bạn bè....">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></TextField>
+            <ListView id="friend" fx:id="list_friend" editable="true" focusTraversable="false" prefHeight="2000.0" prefWidth="240.0" styleClass="listview" stylesheets="@../style/main.css">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <AnchorPane layoutX="247.0" layoutY="14.0" prefHeight="60.0" prefWidth="600.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Circle fx:id="img_avatar" fill="DODGERBLUE" layoutX="39.0" layoutY="30.0" radius="25.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="lb_username" layoutX="68.0" layoutY="6.0" text="Donly Conan" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_status" layoutX="75.0" layoutY="34.0" text="Đang hoạt động" AnchorPane.leftAnchor="75.0" />
+            <ImageView fx:id="img_callphone" fitHeight="50.0" fitWidth="50.0" layoutX="451.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="5.0" />
+            <Circle fx:id="img_status" fill="#06e15e" layoutX="58.0" layoutY="46.0" radius="7.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="39.0" />
+            <Button fx:id="btn_callphone" contentDisplay="GRAPHIC_ONLY" layoutX="461.0" layoutY="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="Button" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+               <graphic>
+                  <ImageView fx:id="img_videocall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/call.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="choose_file" fitHeight="45.0" fitWidth="45.0" layoutX="23.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../icon/picture.png" />
+               </image></ImageView>
+            <ImageView fx:id="btn_send" fitHeight="45.0" fitWidth="45.0" layoutX="536.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../icon/send.png" />
+               </image></ImageView>
+            <TextArea fx:id="txt_message" layoutX="62.0" layoutY="5.0" prefHeight="45.0" prefWidth="428.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="33.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="247.0" AnchorPane.topAnchor="0.0" />
+      <ScrollPane fx:id="scrollMessage" fitToWidth="true" hbarPolicy="NEVER" layoutX="319.0" layoutY="164.0" prefHeight="200.0" prefWidth="200.0" styleClass="listview" stylesheets="@../style/main.css" vbarPolicy="NEVER" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="60.0">
+         <content>
+            <ListView id="message" fx:id="list_message" editable="true" focusTraversable="false" pickOnBounds="false" prefHeight="800.0" styleClass="listview" stylesheets="@../style/main.css" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

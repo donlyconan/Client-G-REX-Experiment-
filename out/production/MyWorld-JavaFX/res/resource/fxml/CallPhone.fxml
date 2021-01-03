@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btn_huybo" layoutX="62.0" layoutY="205.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Hủy bỏ" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="75.0" />
+      <Button fx:id="btn_chapnhan" layoutX="275.0" layoutY="205.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Chấp nhận" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="75.0" />
+      <Text fx:id="txt_time" fill="#e10808" layoutX="162.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="01:22:18" wrappingWidth="175.13671875" AnchorPane.leftAnchor="162.0" AnchorPane.rightAnchor="163.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txt_status" layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đang kết nối đến..." wrappingWidth="478.13671875" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

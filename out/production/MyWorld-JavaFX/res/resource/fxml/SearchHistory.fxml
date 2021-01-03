@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myworld.ui.controller.HistoryController">
+    <children>
+        <DatePicker fx:id="txtdatetime" layoutX="20.0" layoutY="13.0" prefHeight="25.0" prefWidth="390.0" promptText="Thời gian tra cứu...">
+            <padding>
+                <Insets left="30.0" />
+            </padding>
+        </DatePicker>
+        <ImageView fx:id="btn_search" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0">
+            <image>
+                <Image url="@../icon/search.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tb_now" layoutX="10.0" layoutY="10.0" prefWidth="800.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <columns>
+                <TableColumn prefWidth="75.0" text="Thời gian" />
+                <TableColumn prefWidth="75.0" text="Dự báo" />
+                <TableColumn prefWidth="75.0" text="Nhiệt độ" />
+                <TableColumn prefWidth="75.0" text="Mưa" />
+                <TableColumn prefWidth="75.0" text="Khí áp" />
+                <TableColumn prefWidth="75.0" text="Gió" />
+            </columns>
+        </TableView>
+        <Label fx:id="lb_now" layoutX="5.0" layoutY="73.0" prefHeight="30.0" prefWidth="446.0" text="Kết quả tìm kiếm..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+            <graphic>
+                <ImageView fx:id="img_now" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icon/weather.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <ImageView fx:id="close_pane" fitHeight="20.0" fitWidth="20.0" layoutX="674.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="674.0" AnchorPane.topAnchor="15.0">
+            <image>
+                <Image url="@../icon/close.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="431.0" layoutY="17.0" text="Địa điểm" AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="cb_diadiem" layoutX="503.0" layoutY="12.0" prefHeight="29.0" prefWidth="150.0" promptText="Địa điểm" style="-fx-font-size: 12; -fx-background-color: transparent;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="10.0" />
+    </children>
+</AnchorPane>
